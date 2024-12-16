@@ -1,71 +1,30 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
+// Types of Widgets
+// 1. StatelessWidget - basically hs the state immutabel i.e it dosent change
+// 2. StatefulWidget
+// 3. InheritedWidget
+
+// state - state refers to any data that would determine how your widget should look like, rendered and should be behaved
+
+// We have two type of design, i mean these are the most popular one
+// 1. Material Design - designed by google
+// 2. Cupertino Desgin - designed by apple
+
+// if you dont use scaffold. you wont be able to use header in our app
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CounterScreen(),
-    );
-  }
-}
-
-class CounterScreen extends StatefulWidget {
-  @override
-  _CounterScreenState createState() => _CounterScreenState();
-}
-
-class _CounterScreenState extends State<CounterScreen> {
-  int counter = 0;
-
-  void incrementCounter() {
-    setState(() {
-      counter++;
-    });
-  }
-
-  void decrementCounter() {
-    setState(() {
-      counter--;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Counter with Add & Subtract'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'You clicked the button this many times:',
-              style: TextStyle(fontSize: 18),
-            ),
-            Text(
-              '$counter',
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: decrementCounter,
-                  child: Text('-'),
-                ),
-                SizedBox(width: 10),
-                ElevatedButton(
-                  onPressed: incrementCounter,
-                  child: Text('+'),
-                ),
-              ],
-            ),
-          ],
+      home: Scaffold(
+        body: Center(
+          child: Text('Hello World!!!'),
         ),
       ),
     );
