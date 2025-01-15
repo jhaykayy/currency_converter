@@ -27,26 +27,29 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
-             TextField(
-              style: const TextStyle(
-                color: Colors.black,
-              ),
-              decoration: InputDecoration(
-                hintText: "Please enteer amount in USD",
-                hintStyle: const TextStyle(
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: TextField(
+                style: const TextStyle(
                   color: Colors.black,
                 ),
-                prefixIcon: const Icon(Icons.monetization_on_outlined),
-                prefixIconColor: Colors.black,
-                filled: true,
-                fillColor: Colors.white,
-                focusedBorder: border,
-                enabledBorder: border,
-              ),
-              keyboardType: const TextInputType.numberWithOptions(
-                decimal: true,
-              )
-            ),
+                decoration: InputDecoration(
+                  hintText: "Please enteer amount in USD",
+                  hintStyle: const TextStyle(
+                    color: Colors.black,
+                  ),
+                  prefixIcon: const Icon(Icons.monetization_on_outlined),
+                  prefixIconColor: Colors.black,
+                  filled: true,
+                  fillColor: Colors.white,
+                  focusedBorder: border,
+                  enabledBorder: border,
+                ),
+                keyboardType: const TextInputType.numberWithOptions(
+                  decimal: true,
+                )
+                           ),
+             ),
           ],
         ),
       ),
